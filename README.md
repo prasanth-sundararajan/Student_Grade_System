@@ -48,3 +48,24 @@ can receive the same grade.
 ## Example run
 
 ![PowerShell example showing five students and their grades](grade_system_screenshot.png)
+
+## Upload to GitHub
+
+Create an empty repository on GitHub named `Student_Grade_System`. Then open a
+terminal in this project folder and run:
+
+```bash
+git init
+git add grade_system.py README.md grade_system_screenshot.png
+git status
+git commit -m "Add student grade system"
+git branch -M main
+git remote add origin https://github.com/prasanth-sundararajan/Student_Grade_System.git
+git push -u origin main
+```
+
+The `git add` command stages only the program, README, and screenshot, not the
+`venv` folder. If this folder is already a Git repository, skip `git init`. If
+`git remote add origin` reports that `origin` already exists, check the current
+remote with `git remote -v` and skip that command when it already points to your
+GitHub repository.
