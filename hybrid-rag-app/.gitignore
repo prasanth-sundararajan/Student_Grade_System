@@ -1,0 +1,6 @@
+.env
+uploads/
+faiss_index/
+neo4j_data/
+__pycache__/
+.pytest_cache/

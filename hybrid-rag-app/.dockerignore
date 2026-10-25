@@ -1,0 +1,24 @@
+# Git
+.git
+.gitignore
+
+# Environment variables & secrets
+.env
+.env.*
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+
+# Docker and deployment files
+Dockerfile
+docker-compose.yml
+
+# Temporary data / uploads
+backend/uploads/
+data/
