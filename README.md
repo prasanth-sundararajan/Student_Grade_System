@@ -1,71 +1,51 @@
-# Student Grade System
+# Student Grade System (CLI)
 
-A small terminal program that asks for five student names and marks, then prints
-each student's letter grade. It uses only Python's standard library and requires
-no third-party packages.
+> Collect five students' marks in the terminal and print their letter grades.
 
-## Run the program
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-From PowerShell in the project folder, create a virtual environment once:
+## Overview
 
-```powershell
-py -m venv venv
+A pure-Python command-line program with no dependencies. It asks for five students' names and marks, rejects blank names and non-numeric or out-of-range marks (re-prompting instead of crashing), assigns a letter grade and prints the results. See [Streamlit-grade-app](https://github.com/prasanth-sundararajan/Streamlit-grade-app) for the web version.
+
+## Features
+
+- Re-prompts on blank names
+- Catches `ValueError` for non-numeric marks
+- Accepts decimals, enforces 0 to 100
+- Letter grades A to E
+
+## Demo
+
+![Example run](grade_system_screenshot.png)
+
+## Project structure
+
+```text
+.
+└── grade_system.py
 ```
 
-Run the program with the environment's Python executable:
+## Getting started
 
-```powershell
-.\venv\Scripts\python.exe .\grade_system.py
-```
-
-Enter a name and a mark for each of the five students. Names cannot be blank;
-marks must be numbers from 0 through 100. The program accepts decimal marks and
-re-prompts after a blank name, nonnumeric mark, or mark outside the allowed
-range. Grades come from the entered marks, so students in the same mark band
-can receive the same grade.
-
-## Python concepts used
-
-- **Functions and return values:** `get_mark`, `get_grade`, and `main` divide the program into reusable steps.
-- **Input and strings:** `input()` collects names and marks, while `.strip()` removes extra spaces.
-- **Type conversion:** `float()` converts the mark text into a number.
-- **Error handling:** `try` and `except ValueError` handle input that cannot be converted to a number.
-- **Loops and decisions:** `for` processes five students; `while` repeats prompts; `if` and `elif` choose validation and grade outcomes.
-- **Lists and tuples:** a list stores student records, with each record kept as a tuple of name, mark, and grade.
-- **Formatted strings:** f-strings insert values into prompts and output; `:g` formats marks without an unnecessary `.0`.
-- **Main guard:** `if __name__ == "__main__":` runs `main()` when this file is started directly.
-
-## Grading scale
-
-| Mark | Grade |
-| --- | --- |
-| 90-100 | A |
-| 80-89 | B |
-| 70-79 | C |
-| 60-69 | D |
-| Below 60 | E |
-
-## Example run
-
-![PowerShell example showing five students and their grades](grade_system_screenshot.png)
-
-## Upload to GitHub
-
-Create an empty repository on GitHub named `Student_Grade_System`. Then open a
-terminal in this project folder and run:
+**Prerequisites:** Python 3.10+ (no extra packages)
 
 ```bash
-git init
-git add grade_system.py README.md grade_system_screenshot.png
-git status
-git commit -m "Add student grade system"
-git branch -M main
-git remote add origin https://github.com/prasanth-sundararajan/Student_Grade_System.git
-git push -u origin main
+git clone https://github.com/prasanth-sundararajan/Student_Grade_System.git
+cd Student_Grade_System
 ```
 
-The `git add` command stages only the program, README, and screenshot, not the
-`venv` folder. If this folder is already a Git repository, skip `git init`. If
-`git remote add origin` reports that `origin` already exists, check the current
-remote with `git remote -v` and skip that command when it already points to your
-GitHub repository.
+## Usage
+
+```bash
+python grade_system.py
+```
+
+## License
+
+Released under the [MIT License](LICENSE).
+
+## Author
+
+**Prasanth Sundararajan**, Senior SRE and AI Engineer  
+[LinkedIn](https://www.linkedin.com/in/prasanth-s-a093a7109/) · [GitHub](https://github.com/prasanth-sundararajan)
